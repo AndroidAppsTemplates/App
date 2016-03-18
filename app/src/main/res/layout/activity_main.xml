@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola"
+        android:id="@+id/button"
+        android:onClick="clicarButton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextNombre"
+        android:layout_alignBaseline="@+id/textViewNombre"
+        android:layout_alignBottom="@+id/textViewNombre"
+        android:layout_toRightOf="@+id/textViewNombre"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Escriba su nombre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:id="@+id/textViewNombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="48dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editTextTelefono"
+        android:layout_below="@+id/editTextNombre"
+        android:layout_alignLeft="@+id/editTextNombre"
+        android:layout_alignStart="@+id/editTextNombre"
+        android:layout_alignRight="@+id/editTextNombre"
+        android:layout_alignEnd="@+id/editTextNombre"
+        android:hint="Escriba su telefono" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editTextEmail"
+        android:layout_below="@+id/editTextTelefono"
+        android:layout_alignLeft="@+id/editTextTelefono"
+        android:layout_alignStart="@+id/editTextTelefono"
+        android:layout_alignRight="@+id/editTextTelefono"
+        android:layout_alignEnd="@+id/editTextTelefono"
+        android:hint="Escriba su email" />
+
+</RelativeLayout>
