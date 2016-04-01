@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">App</string>
-    <string name="action_settings">Settings</string>
+    <string name="nombre">Usuario</string>
+    <string name="escriba_nombre">Escriba su Nombre</string>
+    <string name="escriba_telefono">Escriba su teléfono</string>
+    <string name="escriba_email">Escriba su email</string>
+    <string name="btn_hola">Hola</string>
+    <string name="action_settings" translatable="false">Configuracion</string>
+    <string name="bienvenido">Bienvenido</string>
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App</string>
+    <string name="btn_hola">Hello</string>
+    <string name="escriba_email">Input you email</string>
+    <string name="escriba_nombre">Input you name</string>
+    <string name="escriba_telefono">Input you cell phone</string>
+    <string name="nombre">User</string>
+    <string name="bienvenido">Welcome</string>
+</resources>

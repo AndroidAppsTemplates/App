@@ -6,7 +6,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hola"
+        android:text="@string/btn_hola"
         android:id="@+id/button"
         android:onClick="clicarButton"
         android:layout_centerVertical="true"
@@ -25,12 +25,12 @@
         android:layout_marginStart="33dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Escriba su nombre" />
+        android:hint="@string/escriba_nombre" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre"
+        android:text="@string/nombre"
         android:id="@+id/textViewNombre"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -50,7 +50,7 @@
         android:layout_alignStart="@+id/editTextNombre"
         android:layout_alignRight="@+id/editTextNombre"
         android:layout_alignEnd="@+id/editTextNombre"
-        android:hint="Escriba su telefono" />
+        android:hint="@string/escriba_telefono" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -63,6 +63,6 @@
         android:layout_alignStart="@+id/editTextTelefono"
         android:layout_alignRight="@+id/editTextTelefono"
         android:layout_alignEnd="@+id/editTextTelefono"
-        android:hint="Escriba su email" />
+        android:hint="@string/escriba_email" />
 
 </RelativeLayout>

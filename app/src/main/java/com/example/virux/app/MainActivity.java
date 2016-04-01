@@ -33,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void clicarButton(View v) {
 
-        Log.i("CLICK", "El usuario ingreso el texto: " + nombreEditText.getText().toString());
+        //Log.i("CLICK", "El usuario ingreso el texto: " + nombreEditText.getText().toString());
+        String saludo = getString(R.string.bienvenido);
 
         Snackbar.make(v,
-                "Hola "+nombreEditText.getText().toString()+" "+
+                saludo+" "+nombreEditText.getText().toString()+" "+
                 telefonoEditText.getText().toString()+" "+
                 emailEditText.getText().toString(),
                 Snackbar.LENGTH_SHORT)
