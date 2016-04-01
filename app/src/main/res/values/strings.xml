@@ -7,4 +7,5 @@
     <string name="btn_hola">Hola</string>
     <string name="action_settings" translatable="false">Configuracion</string>
     <string name="bienvenido">Bienvenido</string>
+    <string name="error_nombre">El nombre debe ser más extenso</string>
 </resources>

@@ -36,12 +36,23 @@ public class MainActivity extends AppCompatActivity {
         //Log.i("CLICK", "El usuario ingreso el texto: " + nombreEditText.getText().toString());
         String saludo = getString(R.string.bienvenido);
 
-        Snackbar.make(v,
-                saludo+" "+nombreEditText.getText().toString()+" "+
-                telefonoEditText.getText().toString()+" "+
-                emailEditText.getText().toString(),
-                Snackbar.LENGTH_SHORT)
-                .show();
+        if (nombreEditText.getText().length() < 3) {
+            nombreEditText.setError(getString(R.string.error_nombre));
+        }else if(false){
+            //Email
+        }else if (false){
+            //Telefono
+        }
+        else{
+            Snackbar.make(v,
+                    saludo+" "+nombreEditText.getText().toString()+" "+
+                            telefonoEditText.getText().toString()+" "+
+                            emailEditText.getText().toString(),
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+
+        }
+
 
     }
 }

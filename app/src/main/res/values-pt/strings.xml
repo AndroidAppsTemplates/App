@@ -7,4 +7,5 @@
     <string name="escriba_nombre">Nome de usuario</string>
     <string name="escriba_telefono">Telefone Celular</string>
     <string name="bienvenido">Bem vindo</string>
+    <string name="error_nombre">O nome tem que ser mais longo</string>
 </resources>
