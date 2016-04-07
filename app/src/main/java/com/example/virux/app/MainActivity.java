@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 
@@ -38,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (nombreEditText.getText().length() < 3) {
             nombreEditText.setError(getString(R.string.error_nombre));
-        }else if(false){
-            //Email
-        }else if (false){
-            //Telefono
+        }else if(!Patterns.EMAIL_ADDRESS.matcher(emailEditText.getText()).matches()){
+            emailEditText.setError(getString(R.string.email_error));
+        }else if (!Patterns.PHONE.matcher(telefonoEditText.getText()).matches()){
+            telefonoEditText.setError(getString(R.string.telefono_error));
         }
         else{
             Snackbar.make(v,

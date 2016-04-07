@@ -8,4 +8,5 @@
     <string name="nombre">User</string>
     <string name="bienvenido">Welcome</string>
     <string name="error_nombre">The name should be more long</string>
+    <string name="email_error">Email Invalid</string>
 </resources>
