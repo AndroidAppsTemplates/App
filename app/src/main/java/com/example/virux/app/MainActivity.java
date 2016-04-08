@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.editTextNombre)
     EditText nombreEditText;
 
+
     @Bind(R.id.editTextTelefono)
     EditText telefonoEditText;
 
