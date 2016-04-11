@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void clicarButton(View v) {
 
-        String saludo = getString(R.string.bienvenido);
+
         if (nombreEditText.getText().length() < 3) {
             nombreEditText.setError(getString(R.string.error_nombre));
         }else if(!Patterns.EMAIL_ADDRESS.matcher(emailEditText.getText()).matches()){
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             Snackbar.make(v,
-                    saludo+" "+nombreEditText.getText().toString()+" "+
+                    getString(R.string.bienvenido)+" "+nombreEditText.getText().toString()+" "+
                             telefonoEditText.getText().toString()+" "+
                             emailEditText.getText().toString(),
                     Snackbar.LENGTH_SHORT)
