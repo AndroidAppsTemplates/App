@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void clicarButton(View v) {
 
-        //Log.i("CLICK", "El usuario ingreso el texto: " + nombreEditText.getText().toString());
         String saludo = getString(R.string.bienvenido);
-
         if (nombreEditText.getText().length() < 3) {
             nombreEditText.setError(getString(R.string.error_nombre));
         }else if(!Patterns.EMAIL_ADDRESS.matcher(emailEditText.getText()).matches()){
