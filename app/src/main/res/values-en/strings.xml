@@ -9,4 +9,6 @@
     <string name="bienvenido">Welcome</string>
     <string name="error_nombre">The name should be more long</string>
     <string name="email_error">Email Invalid</string>
+    <string name="telefono_error">The phone number is invalid</string>
+    <string name="user_save">The user is saved</string>
 </resources>

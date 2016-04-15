@@ -10,4 +10,5 @@
     <string name="error_nombre">El nombre debe ser más extenso</string>
     <string name="email_error">El email no es valido</string>
     <string name="telefono_error">El telefono no es valido</string>
+    <string name="user_save">El usuario ha sido guardado</string>
 </resources>

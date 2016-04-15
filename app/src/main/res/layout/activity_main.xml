@@ -9,8 +9,9 @@
         android:text="@string/btn_hola"
         android:id="@+id/button"
         android:onClick="clicarButton"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/editTextEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
 
     <EditText
         android:layout_width="wrap_content"
