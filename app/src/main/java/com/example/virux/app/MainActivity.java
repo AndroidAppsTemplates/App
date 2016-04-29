@@ -6,12 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnItemClick;
+import butterknife.OnItemLongClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,12 +31,33 @@ public class MainActivity extends AppCompatActivity {
     EditText emailEditText;
 
 
+    UsuarioDAO usuarioDAO;
+
+    @Bind(R.id.listViewUsuarios)
+    ListView usuariosListView;
+
+    ArrayAdapter<String> adapter;
+
+    List<String> usuarios;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+
+        usuarioDAO = new UsuarioDAO(getApplicationContext());
+        usuarios = usuariosToString(usuarioDAO.obtenerTodos());
+
+        adapter = new ArrayAdapter<String>( this,
+                                            android.R.layout.simple_list_item_1,
+                                            android.R.id.text1,
+                                            usuarios);
+
+        usuariosListView.setAdapter(adapter);
+
 
     }
 
@@ -45,9 +71,8 @@ public class MainActivity extends AppCompatActivity {
             u.setEmail(emailEditText.getText().toString());
             u.setTelefono(telefonoEditText.getText().toString());
 
-            //Creamos el DAO y guardamos el usuario
-            UsuarioDAO udao = new UsuarioDAO(getApplicationContext());
-            udao.guardar(u);
+            //guardamos el usuario
+            usuarioDAO.guardar(u);
 
 
             //Limpiar los campos
@@ -61,8 +86,10 @@ public class MainActivity extends AppCompatActivity {
                     Snackbar.LENGTH_SHORT)
                     .show();
 
-            List<Usuario> usuarios = udao.obtenerTodos();
-            Log.d("USUARIOS",usuarios.toString());
+
+            //TODO actualizar listView
+            usuarios.add(u.toString());
+            adapter.notifyDataSetChanged();
 
         }
     }
@@ -86,4 +113,37 @@ public class MainActivity extends AppCompatActivity {
         }
         return isValid;
     }
+
+    private List<String> usuariosToString(List<Usuario> usuarios){
+        List<String> lista = new ArrayList<String>();
+
+        for (Usuario u : usuarios){
+            lista.add(u.toString());
+        }
+
+        return lista;
+    }
+
+    @OnItemClick(R.id.listViewUsuarios)
+    public void clickItemUsuario(int position){
+            String u = usuarios.get(position);
+            Snackbar.make(usuariosListView, u,Snackbar.LENGTH_LONG).show();
+    }
+
+    @OnItemLongClick(R.id.listViewUsuarios)
+    public boolean longClickItemUsuario(int position){
+            Snackbar.make(usuariosListView,"Long click "+position,Snackbar.LENGTH_LONG).show();
+            usuarios.remove(position);
+            adapter.notifyDataSetChanged();
+            return true;
+    }
+
 }
+
+
+
+
+
+
+
+
